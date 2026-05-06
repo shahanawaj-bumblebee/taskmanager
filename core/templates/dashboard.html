@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Projects</h2>
+
+<div class="grid">
+    {% for p in projects %}
+        <div class="card">
+            <h3>{{ p.name }}</h3>
+        </div>
+    {% empty %}
+        <p>No projects</p>
+    {% endfor %}
+</div>
+
+
+<h2>Tasks</h2>
+
+<div class="grid">
+    {% for t in tasks %}
+        <div class="card">
+            <h3>{{ t.title }}</h3>
+            <p><b>Project:</b> {{ t.project.name }}</p>
+            <p><b>User:</b> {{ t.assigned_to.username }}</p>
+            <p><b>Status:</b> {{ t.status }}</p>
+
+            {% if t.status != 'done' %}
+                <a href="/done/{{t.id}}/" class="btn">Mark Done</a>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No tasks</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

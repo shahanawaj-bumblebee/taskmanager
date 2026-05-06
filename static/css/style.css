@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 195px;
+    height: 100vh;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #334155;
+}
+
+/* Main */
+.main {
+    margin-left: 220px;
+    width: 100%;
+}
+
+/* Topbar */
+.topbar {
+    background: white;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #020413;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #004cc6;
+}
+
+/* AUTH PAGES FIX */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Prevent sidebar layout on auth pages */
+body.auth-page .layout {
+    display: none;
+}
+
+/* ===== AUTH PAGE MODERN UI ===== */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff2626, #4f0202);
+}
+
+/* Center layout */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glass card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    color: white;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Title */
+.card h2 {
+    margin-bottom: 20px;
+}
+
+/* Input group */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Icons inside input */
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    display: block;
+    margin-top: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

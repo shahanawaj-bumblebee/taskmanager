@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- ICONS (Font Awesome CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>⚡ TaskManager</h2>
+        <a href="/logout/"><i class="fa fa-sign-out-alt"></i> Logout</a>
+        <a href="/dashboard/"><i class="fa fa-home"></i> Dashboard</a>
+        <a href="/create-project/"><i class="fa fa-folder"></i> Projects</a>
+        <a href="/create-task/"><i class="fa fa-tasks"></i> Tasks</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <div class="topbar">
+            <span>Welcome, {{ request.user.username }}</span>
+        </div>
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

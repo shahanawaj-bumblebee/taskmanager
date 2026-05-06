@@ -1,0 +1,36 @@
+{% extends 'auth_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="card">
+    <h2>✨ Signup</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="input-group">
+            <i class="fa fa-user"></i>
+            <input name="username" placeholder="Username" required>
+        </div>
+
+        <div class="input-group">
+            <i class="fa fa-lock"></i>
+            <input name="password" type="password" placeholder="Password" required>
+        </div>
+
+        <div class="input-group">
+            <i class="fa fa-user-tag"></i>
+            <select name="role">
+                <option value="admin">Admin</option>
+                <option value="member">Member</option>
+            </select>
+        </div>
+
+        <button type="submit">Signup</button>
+    </form>
+
+    <a href="/">Already have an account? Login</a>
+</div>
+
+{% endblock %}
